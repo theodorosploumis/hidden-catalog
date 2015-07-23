@@ -29,13 +29,14 @@ dependencies:
     # Make a Drupal installation to run the tests
     - git clone --branch $BRANCH $GITHUB_REPO $BUILD_DIR
     - cd $BUILD_DIR
+    - pwd
     - rm -rf .git
     - drush --yes make --prepare-install build-hidden_catalog.make webroot
 
 test:
   override:
     - pwd
-    - cd ~/'BUILD_DIR'/webroot
+    - cd ~/hidden-catalog
     - drush --yes site-install hidden_catalog --db-url='$DATABASE_URL' --site-name='Test Drupal distro'
     - drush status
     
@@ -50,8 +51,8 @@ deployment:
       - git commit -am 'Build $BRANCH'
       - git push -u origin $BRANCH_FULL
 
-# notifications:
-#  email:
+notifications:
+  email:
 #    recipients: 
-#    on_success: always
-#    on_failure: always
+    on_success: never
+    on_failure: never
