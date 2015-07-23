@@ -35,7 +35,7 @@ dependencies:
 test:
   override:
     - cd /home/ubuntu/hidden-catalog/webroot
-    - drush -y site-install hidden_catalog --db-url='$DATABASE_URL' --site-name='Test Drupal distro' --writable
+    #- drush -y site-install hidden_catalog --db-url='$DATABASE_URL' --site-name='Test Drupal distro' --writable
     - drush status
     
 deployment:
