@@ -34,7 +34,7 @@ dependencies:
 
 test:
   override:
-    - cd ~/hidden-catalog/webroot/
+    - cd /home/ubuntu/hidden-catalog/webroot
     - drush --yes site-install hidden_catalog --db-url='$DATABASE_URL' --site-name='Test Drupal distro'
     - drush status
     
@@ -43,7 +43,7 @@ deployment:
     branch: $BRANCH_FULL
     commands:
     # Push to github
-      - cd ~/hidden-catalog/webroot
+      - cd /home/ubuntu/hidden-catalog/webroot
       - git init
       - git remote add origin $GITHUB_FULL_REPO
       - git add --all
