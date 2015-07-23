@@ -7,7 +7,7 @@ machine:
   # https://circleci.com/docs/environment#databases
   environment: 
     # https://circleci.com/docs/config-sample#sample
-    DATABASE_URL: mysql://ubuntu:@127.0.0.1:33066/circle_test 
+    DATABASE_URL: mysql://ubuntu:@127.0.0.1:33066/circle_test
     DB_ENCODE: 'utf8'
     BRANCH: '7.x-1.x'
     BRANCH_FULL: '7.x-1.0'
@@ -28,13 +28,13 @@ dependencies:
     # Make a Drupal installation to run the tests
     - git clone --branch $BRANCH $GITHUB_REPO $BUILD_DIR
     - cd $BUILD_DIR
-    - pwd
+    #- pwd
     - rm -rf .git
     - drush --yes make --prepare-install build-hidden_catalog.make webroot
 
 test:
   override:
-    - cd ~/hidden-catalog/webroot
+    - cd ~/hidden-catalog/webroot/
     - drush --yes site-install hidden_catalog --db-url='$DATABASE_URL' --site-name='Test Drupal distro'
     - drush status
     
