@@ -48,4 +48,4 @@ deployment:
       - git remote add origin '$GITHUB_FULL_REPO'
       - git add --all
       - git commit -am 'Automated build'
-      - git push '$BRANCH_FULL'
+      - git push 'GITHUB_FULL_REPO'
