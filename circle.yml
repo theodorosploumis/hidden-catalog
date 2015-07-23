@@ -18,6 +18,9 @@ machine:
 dependencies: 
   # Install additional test dependencies here (like drush, terminus, redis, Behat, etc).
   pre:
+  # Clean /var/www/ folder
+    - rm -rf /var/www/*
+    - rm -f /var/www/*
   # Prepare git
   #  - git config user.name 'TheodorosPloumis'
   #  - git config user.email '$MY_EMAIL'
