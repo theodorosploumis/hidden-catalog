@@ -9,7 +9,6 @@ machine:
     # https://circleci.com/docs/config-sample#sample
     DATABASE_URL: mysql://ubuntu:@127.0.0.1:33066/circle_test 
     DB_ENCODE: 'utf8'
-    BUILD_DIR: 'drupal_dir'
     BRANCH: '7.x-1.x'
     BRANCH_FULL: '7.x-1.0'
     GITHUB_REPO: 'git@github.com:theodorosploumis/hidden-catalog.git'
@@ -35,8 +34,7 @@ dependencies:
 
 test:
   override:
-    - pwd
-    - cd ~/hidden-catalog
+    - cd ~/hidden-catalog/webroot
     - drush --yes site-install hidden_catalog --db-url='$DATABASE_URL' --site-name='Test Drupal distro'
     - drush status
     
@@ -45,6 +43,7 @@ deployment:
     branch: $BRANCH_FULL
     commands:
     # Push to github
+      - cd ~/hidden-catalog/webroot
       - git init
       - git remote add origin $GITHUB_FULL_REPO
       - git add --all
