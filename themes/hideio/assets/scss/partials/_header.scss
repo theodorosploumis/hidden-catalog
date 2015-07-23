@@ -2,10 +2,13 @@
  * Header
  */
 
+.view-products .view-filters,
 #header {
   background-color: #007079;
-  color: #FFF;
-  padding: 20px;
+  padding: 14px;
+  margin-bottom: 14px;
+  border-radius: 5px;
+  color: #fff;
   .views-exposed-form label {
     font-weight: normal;
     text-transform: uppercase;

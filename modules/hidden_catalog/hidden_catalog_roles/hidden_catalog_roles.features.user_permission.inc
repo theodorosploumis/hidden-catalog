@@ -95,22 +95,6 @@ function hidden_catalog_roles_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: 'clone node'.
-  $permissions['clone node'] = array(
-    'name' => 'clone node',
-    'roles' => array(
-      'Manager' => 'Manager',
-    ),
-    'module' => 'clone',
-  );
-
-  // Exported permission: 'clone own nodes'.
-  $permissions['clone own nodes'] = array(
-    'name' => 'clone own nodes',
-    'roles' => array(),
-    'module' => 'clone',
-  );
-
   // Exported permission: 'create product content'.
   $permissions['create product content'] = array(
     'name' => 'create product content',

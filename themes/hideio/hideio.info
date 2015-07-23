@@ -1,16 +1,12 @@
-name = Hideio
-description = Hideio, a pure HTML5 theme with SASS and Responsive grid.
+name = hideio
+description = A teka subtheme, with HTML5, SASS and Responsive grid.
 core = "7.x"
 screenshot = screenshot.png
 base theme = teka
 
 regions[page_top] = Page top
-regions[header] = Header
-regions[highlighted] = Highlighted
 regions[help] = Help
 regions[content] = Content
-regions[sidebar_first] = First sidebar
-regions[sidebar_second] = Second sidebar
 regions[footer] = Footer
 regions[page_bottom] = Page bottom
 

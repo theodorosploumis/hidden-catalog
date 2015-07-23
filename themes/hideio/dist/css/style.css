@@ -659,13 +659,18 @@ ul li.leaf {
 /**
  * Header
  */
+.view-products .view-filters,
 #header {
   background-color: #007079;
-  color: #FFF;
-  padding: 20px; }
+  padding: 14px;
+  margin-bottom: 14px;
+  border-radius: 5px;
+  color: #fff; }
+  .view-products .view-filters .views-exposed-form label,
   #header .views-exposed-form label {
     font-weight: normal;
     text-transform: uppercase; }
+  .view-products .view-filters select,
   #header select {
     margin-bottom: 1.5em;
     max-width: 100%;
@@ -675,12 +680,22 @@ ul li.leaf {
     border: 1px solid #01919D;
     padding: 7px;
     border-radius: 3px; }
+  .view-products .view-filters .form-item-reference-no,
+  .view-products .view-filters .form-item-combine,
+  .view-products .view-filters .form-item-title,
+  .view-products .view-filters .form-item-ref,
+  .view-products .view-filters .form-item-free,
   #header .form-item-reference-no,
   #header .form-item-combine,
   #header .form-item-title,
   #header .form-item-ref,
   #header .form-item-free {
     width: 200px; }
+    .view-products .view-filters .form-item-reference-no .form-text,
+    .view-products .view-filters .form-item-combine .form-text,
+    .view-products .view-filters .form-item-title .form-text,
+    .view-products .view-filters .form-item-ref .form-text,
+    .view-products .view-filters .form-item-free .form-text,
     #header .form-item-reference-no .form-text,
     #header .form-item-combine .form-text,
     #header .form-item-title .form-text,
@@ -691,29 +706,40 @@ ul li.leaf {
       border-radius: 0;
       border: 1px solid #01919D;
       color: #000; }
+  .view-products .view-filters #edit-reset,
   #header #edit-reset {
     background-color: #a90000;
     border: 1px solid #fff; }
+  .view-products .view-filters #edit-submit-products,
   #header #edit-submit-products {
     background-color: #007900;
     border: 1px solid #fff; }
+  .view-products .view-filters .button,
+  .view-products .view-filters button,
+  .view-products .view-filters input[type=submit],
   #header .button,
   #header button,
   #header input[type=submit] {
     background-color: #000; }
     @media screen and (max-width: 960px) {
+      .view-products .view-filters .button,
+      .view-products .view-filters button,
+      .view-products .view-filters input[type=submit],
       #header .button,
       #header button,
       #header input[type=submit] {
         width: 100%; } }
   @media screen and (max-width: 960px) {
+    .view-products .view-filters .views-submit-button,
     #header .views-submit-button {
       clear: left;
       width: 50%; } }
   @media screen and (max-width: 960px) {
+    .view-products .view-filters .views-reset-button,
     #header .views-reset-button {
       width: 50%; } }
   @media screen and (max-width: 960px) {
+    .view-products .view-filters .views-widget-sort-by,
     #header .views-widget-sort-by {
       clear: left; } }
 
@@ -765,7 +791,7 @@ ul li.leaf {
     margin-right: 0; }
 
 #main {
-  padding: 40px 0; }
+  padding: 20px 0; }
 
 #breadcrumb {
   display: none; }
@@ -776,7 +802,7 @@ ul li.leaf {
 .view-products .views-row {
   float: left;
   width: 230px;
-  margin: 0 10px 10px 0;
+  margin: 0 5px 10px 5px;
   min-width: 230px;
   height: 420px;
   background: #fff;
