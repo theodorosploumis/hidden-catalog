@@ -22,7 +22,7 @@ This distribution is mainly based on these contrib modules:
 
 ## Basic themes
 
-The frontend theme (**hideio**) is based on [teka](https://drupal.org/project/teka) theme.
+The frontend theme [hideio](/themes/hideio) is based on [teka](https://drupal.org/project/teka) theme.
 
 For the admin pages the excellent theme [adminimal_theme](https://drupal.org/project/adminimal_theme) is used.
 
