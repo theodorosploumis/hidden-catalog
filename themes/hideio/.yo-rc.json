@@ -1,0 +1,8 @@
+{
+  "generator-teka": {
+    "projectName": "hideio",
+    "projectHost": "hidden-catalog.dev",
+    "projectSlug": "hideio",
+    "baseTheme": "teka"
+  }
+}

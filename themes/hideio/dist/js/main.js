@@ -1,0 +1,1 @@
+!function(a){Drupal.behaviors.teka_main={attach:function(a,n){}}}(jQuery);

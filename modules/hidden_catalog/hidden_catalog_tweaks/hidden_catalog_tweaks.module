@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Hidden Catalog Tweaks feature.
+ */
+
+include_once 'hidden_catalog_tweaks.features.inc';

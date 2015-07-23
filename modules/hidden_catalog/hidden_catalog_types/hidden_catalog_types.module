@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Hidden Catalog Types feature.
+ */
+
+include_once 'hidden_catalog_types.features.inc';

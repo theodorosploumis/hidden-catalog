@@ -1,0 +1,92 @@
+/**
+ * Default content styles
+ */
+
+$very-small-width: 650px;
+
+// Layout
+#sidebar-first {
+  @include span-columns(2);
+  @include media(max-width $very-small-width) {
+    @include span-columns(12);
+  }
+}
+
+#content {
+  @include span-columns(10);
+  @include media(max-width $very-small-width) {
+    @include span-columns(12);
+  }
+}
+
+.no-sidebars #content {
+  @include span-columns(12);
+}
+
+#main {
+  padding: 40px 0;
+}
+// Breadcrumb
+#breadcrumb {
+  display: none;
+}
+
+// Views
+.view-products {
+  .view-content {
+    overflow: hidden;
+  }
+  .views-row {
+    float: left;
+    width: 230px;
+    margin: 0 10px 10px 0;
+    min-width: 230px;
+    height: 420px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    @include media(max-width $very-small-width) {
+      @include span-columns(12);
+    }
+  }
+  .views-field-title h3 {
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #8C8C8C;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .views-field-field-price {
+    font-weight: 600;
+  }
+  .view-header {
+    margin-bottom: 1em;
+  }
+  .pager {
+    border-top: 1px solid #ededed;
+    margin: 30px 0;
+    text-align: left;
+    li {
+      margin-right: 1em;
+    }
+    li.pager-current {
+      border-top: 1px solid #333333;
+      color: #333333;
+      margin-top: -1px;
+    }
+  }
+
+}
+
+/**
+.view-products .views-row {
+  &:hover,
+  &:focus {
+    .views-field-title h3 {
+      overflow: visible;
+    }
+  }
+}
+*/

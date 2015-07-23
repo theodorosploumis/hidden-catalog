@@ -1,0 +1,79 @@
+/**
+ * Header
+ */
+
+#header {
+  background-color: #007079;
+  color: #FFF;
+  padding: 20px;
+  .views-exposed-form label {
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+  select {
+    margin-bottom: 1.5em;
+    max-width: 100%;
+    width: auto;
+    color: #fff;
+    background-color: #202020;
+    border: 1px solid #01919D;
+    padding: 7px;
+    border-radius: 3px;
+  }
+  .form-item-reference-no,
+  .form-item-combine,
+  .form-item-title,
+  .form-item-ref,
+  .form-item-free {
+    width: 200px;
+    @include media(max-width $tablet-width) {
+      //width: 150px;
+    }
+    .form-text {
+      background: #C8C8C8;
+      padding: 7px;
+      border-radius: 0;
+      border: 1px solid #01919D;
+      color: #000;
+    }
+  }
+  #edit-reset {
+    background-color: #a90000;
+    border: 1px solid #fff;
+  }
+  #edit-submit-products {
+    background-color: #007900;
+    border: 1px solid #fff;
+  }
+  .button,
+  button,
+  input[type=submit] {
+    background-color: #000;
+    @include media(max-width $tablet-width) {
+      width: 100%;
+    }
+  }
+  .views-submit-button {
+    @include media(max-width $tablet-width) {
+      clear: left;
+      width: 50%;
+    }
+  }
+  .views-reset-button {
+    @include media(max-width $tablet-width) {
+      width: 50%;
+    }
+  }
+  .views-widget-sort-by {
+    @include media(max-width $tablet-width) {
+      clear: left;
+    }
+  }
+
+}
+
+.views-exposed-form .views-exposed-widget {
+  float: left;
+  padding: 0 1em 0 0;
+}
+
