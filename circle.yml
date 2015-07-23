@@ -45,7 +45,7 @@ deployment:
     commands:
     # Push to github
       - git init
-      - git remote add origin '$GITHUB_FULL_REPO'
+      - git remote add origin 'git@github.com:theodorosploumis/hidden-catalog-full.git'
       - git init
       - git config --global user.email "me@theodorosploumis.com"
       - git config --global user.name "TheodorosPloumis"
@@ -53,4 +53,4 @@ deployment:
       - git commit -am "CI upload"
       - pwd
       #- git push '$GITHUB_FULL_REPO' '7.x-1.0' -f
-      - git push 'git@github.com:theodorosploumis/hidden-catalog-full.git' '7.x-1.0' -f
+      - git push 'git@github.com:theodorosploumis/hidden-catalog-full.git'
