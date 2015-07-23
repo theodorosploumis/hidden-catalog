@@ -31,11 +31,12 @@ dependencies:
     - cd $BUILD_DIR
     - rm -rf .git
     - drush --yes make --prepare-install build-hidden_catalog.make webroot
-    - cd webroot
 
 test:
   override:
-    - drush --yes site-install hidden_catalog --db-url="$DATABASE_URL" --site-name="Test Drupal distro"
+    - pwd
+    - cd ~/'BUILD_DIR'/webroot
+    - drush --yes site-install hidden_catalog --db-url='$DATABASE_URL' --site-name='Test Drupal distro'
     - drush status
     
 deployment:
