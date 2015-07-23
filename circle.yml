@@ -30,12 +30,13 @@ dependencies:
     #- drush --yes site-install hidden_catalog --db-url="$DATABASE_URL" --site-name="Test Drupal distro"
  
 deployment:
-  commands:
-  # Push to github
-    - cd $BUILD_DIR/webroot
-    - git init
-    - git add --all
-    - git commit -am 'Build $BRANCH'
+  production:
+    commands:
+    # Push to github
+      - cd $BUILD_DIR/webroot
+      - git init
+      - git add --all
+      - git commit -am 'Build $BRANCH'
 
 # notifications:
 #  email:
