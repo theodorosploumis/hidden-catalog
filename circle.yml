@@ -1,0 +1,44 @@
+# https://circleci.com/docs/configuration#machine
+machine:
+  php:
+    version: 5.5.11
+  timezone:
+    Europe/Athens
+  # https://circleci.com/docs/environment#databases
+  environment: 
+    # https://circleci.com/docs/config-sample#sample
+    DATABASE_URL: mysql://ubuntu:@127.0.0.1:33066/circle_test 
+    DB_ENCODE: 'utf8'
+    BUILD_DIR: '/var/www/'
+    BRANCH: '7.x-1.x'
+    GITHUB_REPO: 'git@github.com:theodorosploumis/hidden-catalog.git'
+  
+dependencies: 
+  # Install additional test dependencies here (like drush, terminus, redis, Behat, etc).
+  pre: 
+    # Install Drush.
+    - composer global require drush/drush:6.x --prefer-source --no-interaction
+    - export PATH="$HOME/.composer/vendor/bin:$PATH"
+    - drush cc drush 
+  override: 
+    # Make a Drupal installation to run the tests
+    - git clone --branch $BRANCH $GITHUB_REPO $BUILD_DIR
+    - cd $BUILD_DIR
+    - rm -rf .git
+    - drush --yes make --prepare-install build-hidden_catalog.make webroot
+    - cd $BUILD_DIR/webroot
+    #- drush --yes site-install hidden_catalog --db-url="$DATABASE_URL" --site-name="Test Drupal distro"
+ 
+deployment:
+  commands:
+  # Push to github
+    - cd $BUILD_DIR/webroot
+    - git init
+    - git add --all
+    - git commit -am 'Build $BRANCH'
+
+# notifications:
+#  email:
+#    recipients: 
+#    on_success: always
+#    on_failure: always
