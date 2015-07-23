@@ -24,7 +24,7 @@ dependencies:
   # Install Drush.
     - composer global require drush/drush:6.x --prefer-source --no-interaction
     - drush cc drush 
-  override: 
+  override:
     # Make a Drupal installation to run the tests
     - git clone --branch $BRANCH $GITHUB_REPO $BUILD_DIR
     - cd $BUILD_DIR
@@ -40,12 +40,13 @@ test:
     
 deployment:
   production:
-    branch: $BRANCH_FULL
+    branch: '$BRANCH_FULL'
+    pwd:
+      /home/ubuntu/hidden-catalog/webroot
     commands:
     # Push to github
-      - cd /home/ubuntu/hidden-catalog/webroot
       - git init
-      - git remote add origin $GITHUB_FULL_REPO
+      - git remote add origin '$GITHUB_FULL_REPO'
       - git add --all
-      - git commit -am 'Build $BRANCH'
+      - git commit -am 'Build "$BRANCH"'
       - git push -u origin '$BRANCH_FULL'
