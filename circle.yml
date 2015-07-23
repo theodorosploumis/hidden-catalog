@@ -10,6 +10,7 @@ machine:
     DATABASE_URL: mysql://ubuntu:@127.0.0.1/circle_test
     DB_ENCODE: 'utf8'
     BRANCH: '7.x-1.x'
+    FULL_BRANCH: '7.x-1.0'
     GITHUB_REPO: 'git@github.com:theodorosploumis/hidden-catalog.git'
     GITHUB_FULL_REPO: 'git@github.com:theodorosploumis/hidden-catalog-full.git'
   
@@ -39,18 +40,18 @@ test:
     
 deployment:
   production:
-    branch: '7.x-1.0'
+    branch: '$FULL_BRANCH'
     pwd:
       /home/ubuntu/hidden-catalog/webroot
     commands:
     # Push to github
       - git init
-      - git remote add origin 'git@github.com:theodorosploumis/hidden-catalog-full.git'
+      - git remote add origin '$GITHUB_FULL_REPO'
       - git init
-      - git config --global user.email "me@theodorosploumis.com"
-      - git config --global user.name "TheodorosPloumis"
+      #- git config --global user.email "me@theodorosploumis.com"
+      #- git config --global user.name "TheodorosPloumis"
       - git add .
       - git commit -am "CI upload"
       - pwd
       #- git push '$GITHUB_FULL_REPO' '7.x-1.0' -f
-      - git push 'git@github.com:theodorosploumis/hidden-catalog-full.git'
+      - git push origin '$FULL_BRANCH'
