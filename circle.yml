@@ -9,7 +9,7 @@ machine:
     # https://circleci.com/docs/config-sample#sample
     DATABASE_URL: mysql://ubuntu:@127.0.0.1:33066/circle_test 
     DB_ENCODE: 'utf8'
-    BUILD_DIR: '/var/www/'
+    BUILD_DIR: 'drupal_dir'
     BRANCH: '7.x-1.x'
     BRANCH_FULL: '7.x-1.0'
     GITHUB_REPO: 'git@github.com:theodorosploumis/hidden-catalog.git'
@@ -18,9 +18,6 @@ machine:
 dependencies: 
   # Install additional test dependencies here (like drush, terminus, redis, Behat, etc).
   pre:
-  # Clean /var/www/ folder
-    - rm -rf /var/www/*
-    - rm -f /var/www/*
   # Prepare git
   #  - git config user.name 'TheodorosPloumis'
   #  - git config user.email '$MY_EMAIL'
