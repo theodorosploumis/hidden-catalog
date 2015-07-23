@@ -32,10 +32,11 @@ dependencies:
     - drush --yes make --prepare-install build-hidden_catalog.make webroot
 
 test:
+  pwd: 
+    /home/ubuntu/hidden-catalog/webroot
   override:
-    - cd /home/ubuntu/hidden-catalog/webroot
-    - drush -y site-install hidden_catalog --db-url='$DATABASE_URL' --site-name='Test Drupal distro' 
-        pwd: '/home/ubuntu/hidden-catalog/webroot'
+    #- cd /home/ubuntu/hidden-catalog/webroot
+    - drush -y site-install hidden_catalog --db-url='$DATABASE_URL' --site-name='Test Drupal distro'
     - drush status
     
 deployment:
@@ -49,4 +50,4 @@ deployment:
       - git remote add origin '$GITHUB_FULL_REPO'
       - git add --all
       - git commit -am 'Automated build'
-      - git push -u origin '$BRANCH_FULL'
+      - git push '$BRANCH_FULL'
