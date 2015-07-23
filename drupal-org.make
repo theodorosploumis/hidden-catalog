@@ -37,9 +37,6 @@ projects[entity][subdir] = "contrib"
 projects[internal_nodes][version] = "1.2"
 projects[internal_nodes][subdir] = "contrib"
 
-projects[node_clone][version] = "1.x-dev"
-projects[node_clone][subdir] = "contrib"
-
 projects[shs][version] = "1.x-dev"
 projects[shs][subdir] = "contrib"
 
