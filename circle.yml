@@ -7,7 +7,7 @@ machine:
   # https://circleci.com/docs/environment#databases
   environment: 
     # https://circleci.com/docs/config-sample#sample
-    DATABASE_URL: mysql://ubuntu:@127.0.0.1:33066/circle_test
+    DATABASE_URL: mysql://ubuntu:@127.0.0.1/circle_test
     DB_ENCODE: 'utf8'
     BRANCH: '7.x-1.x'
     BRANCH_FULL: '7.x-1.0'
@@ -35,7 +35,7 @@ dependencies:
 test:
   override:
     - cd /home/ubuntu/hidden-catalog/webroot
-    - drush --yes site-install hidden_catalog --db-url='$DATABASE_URL' --site-name='Test Drupal distro'
+    - drush -y site-install hidden_catalog --db-url='$DATABASE_URL' --site-name='Test Drupal distro' --writable
     - drush status
     
 deployment:
