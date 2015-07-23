@@ -11,7 +11,7 @@ machine:
     DB_ENCODE: 'utf8'
     BRANCH: '7.x-1.x'
     GITHUB_REPO: 'git@github.com:theodorosploumis/hidden-catalog.git'
-    GITHUB_FULL_REPO: 'git@github.com:theodorosploumis/hidden-catalog-full.git:7.x-1.0'
+    GITHUB_FULL_REPO: 'git@github.com:theodorosploumis/hidden-catalog-full.git:'
   
 dependencies: 
   # Install additional test dependencies here (like drush, terminus, redis, Behat, etc).
@@ -48,4 +48,4 @@ deployment:
       - git remote add origin '$GITHUB_FULL_REPO'
       - git add --all
       - git commit -am 'Automated build'
-      - git push 'GITHUB_FULL_REPO'
+      - git push '$GITHUB_FULL_REPO'
