@@ -45,13 +45,13 @@ deployment:
       /home/ubuntu/hidden-catalog/webroot
     commands:
     # Push to github
-      - git init
-      - git remote add origin '$GITHUB_FULL_REPO'
-      - git init
-      #- git config --global user.email "me@theodorosploumis.com"
-      #- git config --global user.name "TheodorosPloumis"
-      - git add .
-      - git commit -am "CI upload"
-      - pwd
+      - cd ~/hidden-catalog/webroot; git init
+      - cd ~/hidden-catalog/webroot; git remote add origin '$GITHUB_FULL_REPO'
+      - cd ~/hidden-catalog/webroot; git config --global user.email "me@theodorosploumis.com"
+      - cd ~/hidden-catalog/webroot; git config --global user.name "TheodorosPloumis"
+      - cd ~/hidden-catalog/webroot; git add --all
+      - cd ~/hidden-catalog/webroot; git commit -am "CI upload"
+      - cd ~/hidden-catalog/webroot; pwd
       #- git push '$GITHUB_FULL_REPO' '7.x-1.0' -f
-      - git push origin '$FULL_BRANCH'
+      - cd ~/hidden-catalog/webroot; git push '$GITHUB_FULL_REPO' '$FULL_BRANCH'
+  
