@@ -24,7 +24,6 @@ dependencies:
     
   # Install Drush.
     - composer global require drush/drush:6.x --prefer-source --no-interaction
-    - export PATH="$HOME/.composer/vendor/bin:$PATH"
     - drush cc drush 
   override: 
     # Make a Drupal installation to run the tests
@@ -32,7 +31,7 @@ dependencies:
     - cd $BUILD_DIR
     - rm -rf .git
     - drush --yes make --prepare-install build-hidden_catalog.make webroot
-    - cd $BUILD_DIR/webroot
+    - cd webroot
     #- drush --yes site-install hidden_catalog --db-url="$DATABASE_URL" --site-name="Test Drupal distro"
  
 deployment:
@@ -40,7 +39,6 @@ deployment:
     branch: $BRANCH_FULL
     commands:
     # Push to github
-      - cd $BUILD_DIR/webroot
       - git init
       - git remote add origin $GITHUB_FULL_REPO
       - git add --all
