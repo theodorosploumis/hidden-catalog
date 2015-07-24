@@ -47,11 +47,11 @@ deployment:
     # Push to github
       - git init
       - git remote add origin '$GITHUB_FULL_REPO'
-      - git config --global user.email "me@theodorosploumis.com"
-      - git config --global user.name "TheodorosPloumis"
+      - git config --global user.email "ci@theodorosploumis.com"
+      - git config --global user.name "CI User"
       - git add --all
       - git commit -am "CI upload"
       - pwd
       #- git push '$GITHUB_FULL_REPO' '7.x-1.0' -f
-      - git push '$GITHUB_FULL_REPO' '$FULL_BRANCH'
+      - git push '$GITHUB_FULL_REPO' '$FULL_BRANCH' -f
   
