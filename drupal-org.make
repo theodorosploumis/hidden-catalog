@@ -46,9 +46,6 @@ projects[strongarm][subdir] = "contrib"
 projects[taxonomy_delete_all_terms][version] = "1.x-dev"
 projects[taxonomy_delete_all_terms][subdir] = "contrib"
 
-projects[jquery_update][version] = "3.0-alpha2"
-projects[jquery_update][subdir] = "contrib"
-
 projects[lightbox2][version] = "1.0-beta1"
 projects[lightbox2][subdir] = "contrib"
 
