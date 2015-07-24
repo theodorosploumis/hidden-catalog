@@ -1,4 +1,3 @@
-; Packaging information for hidden_catalog
 name = "Hidden Catalog"
 description = "A Catalog of nodes (eg products) hidden from the public."
 exclusive = "1"
