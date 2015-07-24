@@ -1,5 +1,5 @@
 # Hidden Catalog
-This is the installation profile for the Drupal distribution "Hidden Catalog".
+This is the installation profile for the Drupal distribution "**Hidden Catalog**".
 
 
 ## About
