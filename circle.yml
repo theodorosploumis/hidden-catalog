@@ -18,9 +18,6 @@ dependencies:
   # Install additional test dependencies here (like drush, terminus, redis, Behat, etc).
   pre:
   # Prepare git
-  #  - git config user.name 'TheodorosPloumis'
-  #  - git config user.email '$MY_EMAIL'
-    
   # Install Drush.
     - composer global require drush/drush:6.x --prefer-source --no-interaction
     - drush cc drush 
