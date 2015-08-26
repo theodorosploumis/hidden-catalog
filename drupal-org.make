@@ -52,6 +52,12 @@ projects[lightbox2][subdir] = "contrib"
 projects[views][version] = "3.11"
 projects[views][subdir] = "contrib"
 
+projects[views_bulk_operations][version] = "3.3"
+projects[views_bulk_operations][subdir] = "contrib"
+
+projects[admin_views][version] = "1.5"
+projects[admin_views][subdir] = "contrib"
+
 projects[views_selective_filters][version] = "1.4"
 projects[views_selective_filters][subdir] = "contrib"
 
